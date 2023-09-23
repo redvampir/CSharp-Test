@@ -10,6 +10,9 @@ namespace Урок_1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Привет, мир");
+            Console.ReadKey();
         }
+
     }
 }

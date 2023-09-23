@@ -10,33 +10,34 @@ namespace Урок_1
     {
         static void Main(string[] args)
         {
-            //Основные типы переменных int | float | char | string | bool 
-            //Целочисленные типы переменных
-            byte b; // 0 до 255
-            sbyte sd; // -128 до 127
-            short s; // -32768 до 32767
-            ushort us; // 0 до 65535
-            int i; // -2147483648 до 2147483647
-            uint ui; // 0 до 4294672295
-            long l;
-            ulong ul;
+            // + - * / %
 
-            //Число с плавающей точкой 
-            float f = 5.7f; // Для типа флоат нужен суфикс f.
-            double d = 5.7;
-            // Символьные типы переменных
-            char c = ' ';
-            // строковый тип переменных
-            string str = "Привет, как дела?";
-            // Логический тип переменных
-            bool bl;
+            float result;
 
-            int age;
+            int x, y;
 
-            age = 27;
-            age = 10;
+            x = 5;
+            y = 2;
 
+            result = Convert.ToSingle(x) / y; // конвертация в дробное число
+            Console.WriteLine(result);
 
+            int timeInMinets = 130;
+            int hour;
+            int minute;
+
+            hour = timeInMinets / 60;
+            minute = timeInMinets % 60;
+
+            Console.WriteLine("hours: " + hour);
+            Console.WriteLine("minuets: " + minute);
+
+            int age = 18;
+            age++;
+            age += 1;
+
+            int result_2 = 5 + (12 - 5) * 3 - 1 + 5 * 2;
+            Console.WriteLine(result_2);
         }
 
     }

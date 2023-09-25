@@ -10,12 +10,14 @@ namespace Урок_1
     {
         static void Main(string[] args)
         {
-            // == != > >= <= <
-            int age = 18;
-            bool accesIsAllowed;
+            string greeting = "Привет";
+            string name = "Валентин";
+            string message = greeting + " " + name;
 
-            accesIsAllowed = age >= 18;
-            Console.WriteLine(accesIsAllowed);
+            Console.WriteLine(message + ", рад тебя видеть!");
+
+            int age = 5;
+            Console.WriteLine("Привет, завтра тебе исполнится: " + (age + 1) );
         }
 
     }

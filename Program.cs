@@ -10,14 +10,12 @@ namespace Урок_1
     {
         static void Main(string[] args)
         {
-            string greeting = "Привет";
-            string name = "Валентин";
-            string message = greeting + " " + name;
+            int age = 27;
+            string name = "Valentin";
 
-            Console.WriteLine(message + ", рад тебя видеть!");
-
-            int age = 5;
-            Console.WriteLine("Привет, завтра тебе исполнится: " + (age + 1) );
+            Console.WriteLine("Ваше имя: " + name + " вам " + age + " лет!");
+            //Интерполяция
+            Console.WriteLine($"Ваше имя: {name} вам {27} лет!");
         }
 
     }

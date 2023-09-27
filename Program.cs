@@ -10,37 +10,26 @@ namespace Урок_1
     {
         static void Main(string[] args)
         {
-            int age;
-            Console.Write("Введите свой возраст: ");
-            age = Convert.ToInt32(Console.ReadLine());
-            if (age >= 18)
-            {
-                Console.WriteLine("Добро пожаловать в наш бар.");
-                Console.WriteLine("Что будете пить.");
-            }
-            else
-            {
-                Console.WriteLine("Вы слишком юны.");
-                Console.WriteLine("Приходите к нам через " + (18 - age) + " лет.");
-            }
+            
 
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
 
-            string dayOfWeek;
-            Console.WriteLine("Введите день недели: ");
-            dayOfWeek = Console.ReadLine();
+            // Логическое и && верны оба значения тогда true
 
-            if(dayOfWeek == "понедельник")
-            {
-                Console.WriteLine("Проходим курсы");
-            }    
+            // Логическое или || верно одно из значений
 
-            else if (dayOfWeek == "вторник")
+            int money = 500;
+            int level = 10;
+
+            if (money > 500 || level > 9) 
             {
-                Console.WriteLine("Делаем домашнее задание." );            
+                Console.WriteLine("Проходи! Добро пожаловать в гильдию!");
             }
-
+            else
+            {
+                Console.WriteLine("Вас выпнули за дверь!");
+            }
         }
 
 

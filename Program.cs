@@ -17,7 +17,7 @@ namespace Урок_1
             string userInput;
 
             Console.Write("Введите Пароль: ");
-            
+
             userInput = Console.ReadLine();
 
             if (userInput == password)

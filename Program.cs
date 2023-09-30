@@ -10,8 +10,6 @@ namespace Урок_1
     {
         static void Main(string[] args)
         {
-            
-
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
 
@@ -90,11 +88,7 @@ namespace Урок_1
                     Console.WriteLine("Выбрана неверная операция");
                     break;
             }
-
             Console.WriteLine($"Ваш баланс: {rublesInWaller} рублей," + $" {dollarsInWallet} долларов.");
         }
-
-
-
     }
 }

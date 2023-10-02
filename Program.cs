@@ -19,19 +19,11 @@ namespace Урок_1
 
             age = Convert.ToInt32(Console.ReadLine());
 
-            while (age-- > 0)
+            for(int i = 0; i < age; i++)
             {
-
-                if (age == 5)
-                {
-                    //break; останавливает выполнение цикла.
-                    continue; // пропуск одной итерации.
-                }
-
-                Console.WriteLine("С Днем Рождения!");
-                
-              
+                Console.WriteLine($"С днем рождения. Вам исполнилось {age} лет.") ;
             }
+           
 
         }
     }

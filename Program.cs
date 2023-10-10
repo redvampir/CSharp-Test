@@ -13,21 +13,57 @@ namespace Урок_1
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
 
-            //int[] cucubers = { 24, 25, 17, 38, 100, int.MaxValue, int.MinValue};
-            int[] cucubers = new int[4] { 4, 1, 6, 7 };
-           //Console.WriteLine(cucubers[0]);
+            int[] sectors = { 6, 28, 15, 15, 17 };
+            bool isOpen= true;
 
-            // cucubers[7] = 13;
-            //cucubers[3] = 3;
-
-            // Random rand = new Random() пример с использованием рандома;
-
-            for ( int i = 0; i < cucubers.Length; i++)
+            while (isOpen)
             {
-             //   cucubers[i] = rand.Next(0,101);
-                Console.WriteLine( cucubers[i]);
+                Console.SetCursorPosition(0, 18);
+                for (int i = 0; i < sectors.Length; i++)
+                {
+                    Console.WriteLine($"В секторе { i + 1 } свободно {sectors[i]} мест.");
+                }
+                Console.SetCursorPosition(0, 0);
+                Console.WriteLine("Регистрация рейса.");
+                Console.WriteLine("\n\n1 - забронировать место\n\n2 - выход из программы.\n\n");
+                Console.Write("Введите номер команды: ");
+
+                switch(Convert.ToInt32(Console.ReadLine()))
+                {
+                    case 1:
+                        int userSector, userPlaceAmount;
+                        Console.WriteLine("В каком секторе вы хотите лететь? ");
+                        userSector = Convert.ToInt32(Console.ReadLine()) - 1;
+                        if(sectors.Length <= userSector || userSector < 0)
+                        {
+                            Console.WriteLine("Такого сектора не существует.");
+                            break;
+                        }
+                        Console.Write("Сколько мест вы хотите забронировать? ");
+                        userPlaceAmount = Convert.ToInt32(Console.ReadLine());
+                        if ( userPlaceAmount < 0)
+                        {
+                            Console.WriteLine("Неверное количество мест.");
+                            break;
+                        }
+                        if (sectors[userSector] < userPlaceAmount)
+                        {
+                            Console.WriteLine($"В секторе {userSector} недостаточно мест. " +
+                                $"Остаток {sectors[userSector]}");
+                            break;
+                        }
+
+                        sectors[userSector] -= userPlaceAmount;
+                        Console.WriteLine("Бронирование успешно");
+                        break;
+                    case 2:
+                        isOpen = false;
+                        break;
+                }
+
+                Console.ReadKey();
+                Console.Clear();
             }
         }   
-
     }
 }

@@ -85,7 +85,7 @@ namespace Урок_1
                         break;
                 }
 
-                if (map[userX, userY] == 'X')
+                if (map[userX, userY] == 'x')
                 {
                     map[userX, userY] = 'O';
                     char[] tempBag = new char[bag.Length+1];

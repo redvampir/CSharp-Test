@@ -13,24 +13,15 @@ namespace Урок_1
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
 
-            int[] petrovich = new int[3];
-            int[] ivanovich = new int[5];
-            int[] sidorovich;
-
-            petrovich = ivanovich;
-
-            petrovich[0] = 5;
-            petrovich[1] = 3;
-
-            sidorovich = petrovich; 
-
-            Console.WriteLine(ivanovich[0]);
-            Console.WriteLine(ivanovich[1]);
-
-            petrovich = new int[10];
-            
-            
-            
+            int[] bag = new int[1];
+            bag[0] = 12;
+            int[] tempBag = new int[bag.Length +1];
+            for (int i = 0; i < bag.Length; i++)
+            {
+                tempBag[i] = bag[i];
+                Console.WriteLine(tempBag[i] + " значение из сумки");
+            }
+            Console.WriteLine(tempBag[tempBag.Length - 1] + " последнее значение временного хранилища.");
         }   
     }
 }

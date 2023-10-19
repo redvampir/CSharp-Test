@@ -13,19 +13,16 @@ namespace Урок_1
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
 
-            Console.WriteLine("Привет!");
-            Console.WriteLine("Ты здесь?");
-            writeError("Нет соединения с интернетом.");
-            Console.WriteLine("Странно...");
-            writeError("Интернет не оплачен");
-        }
+            int x = 3, y = 8, sum;
 
-        static void writeError(string text)
-        {
-            ConsoleColor defautColor = Console.ForegroundColor;
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(text);
-            Console.ForegroundColor = defautColor;
+            sum = Sum(x, y);
+            Console.WriteLine(sum);
+
+           int Sum(int z, int c)
+            {
+                return z + c;
+
+            }
         }
     }
 }

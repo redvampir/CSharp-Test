@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,19 +14,19 @@ namespace Урок_1
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
 
-            Console.WriteLine("Привет!");
-            Console.WriteLine("Ты здесь?");
-            writeError("Нет соединения с интернетом." );
-            Console.WriteLine("Странно...");
-            writeError("Интернет не оплачен", symbol: '@');
+            int[] array = new int[5];
+            array = EditArray(array, 2, 5);
+            Console.WriteLine(array[2]);
+    
+        }
 
-             void writeError(string text, ConsoleColor color = ConsoleColor.Red, char symbol = '!')
-            {
-                ConsoleColor defautColor = Console.ForegroundColor;
-                Console.ForegroundColor = color;
-                Console.WriteLine(symbol + text);
-                Console.ForegroundColor = defautColor;
-            }
+        static int[] EditArray(int[] array, int index, int value)
+        {
+            array = new int[6];
+            array[index] = value;
+            return array;
         }
     }
+
+
 }

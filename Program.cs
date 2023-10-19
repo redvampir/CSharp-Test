@@ -13,18 +13,19 @@ namespace Урок_1
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
 
-            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                Console.WriteLine(numbers[i]);
-            }
-
-            foreach (int numder in numbers) 
-            {
-                Console.Write(numder + " ");
-            }
+            Console.WriteLine("Привет!");
+            Console.WriteLine("Ты здесь?");
+            writeError("Нет соединения с интернетом.");
+            Console.WriteLine("Странно...");
+            writeError("Интернет не оплачен");
         }
 
+        static void writeError(string text)
+        {
+            ConsoleColor defautColor = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(text);
+            Console.ForegroundColor = defautColor;
+        }
     }
 }
